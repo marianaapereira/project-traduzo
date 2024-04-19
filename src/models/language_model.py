@@ -6,4 +6,13 @@ class LanguageModel(AbstractModel):
     _collection = db["languages"]
 
     def __init__(self, data):
-        super().__init__(data)
+        self.data = data
+
+    def to_dict(self):
+            name = self.data["name"]
+            acronym = self.data["acronym"]
+
+            return {
+                "name": name,
+                "acronym": acronym
+            }
