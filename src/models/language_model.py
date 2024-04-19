@@ -9,10 +9,16 @@ class LanguageModel(AbstractModel):
         self.data = data
 
     def to_dict(self):
-            name = self.data["name"]
-            acronym = self.data["acronym"]
+        return {
+            "name": self.data["name"],
+            "acronym": self.data["acronym"]
+        }
 
-            return {
-                "name": name,
-                "acronym": acronym
-            }
+    def list_dicts():
+        languages_collection = db.languages.find()
+        languages = []
+
+        for language in languages_collection:
+            languages.append(language)
+
+        return languages
