@@ -11,6 +11,7 @@ def index():
     translate_from = "pt"
     translate_to = "en"
     translated = "What do you want to translate?"
+    print(languages)
 
     return render_template(
         "index.html",
